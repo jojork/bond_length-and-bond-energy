@@ -1,5 +1,4 @@
 # bond_length-and-bond-energy
-this is the script for finding the bond length and bond energy of 2 elements in a unit cell
 from ase import Atoms
 from ase.optimize import LBFGS
 import numpy as np
@@ -15,7 +14,7 @@ elist = []
 for l in llist:
     b = l * 1.732  # approximate √3 * a
 
-    # Build atomic structure (C and Fe pair)
+    # Build atomic structure 
     atoms = Atoms('your element', [(0, 0, 10), (l / 2, b / 2, 10)])
     atoms.set_pbc((True, True, True))
     atoms.set_cell((l, b, 20.0))
