@@ -16,7 +16,7 @@ for l in llist:
     b = l * 1.732  # approximate √3 * a
 
     # Build atomic structure (C and Fe pair)
-    atoms = Atoms('CFe', [(0, 0, 10), (l / 2, b / 2, 10)])
+    atoms = Atoms('your element', [(0, 0, 10), (l / 2, b / 2, 10)])
     atoms.set_pbc((True, True, True))
     atoms.set_cell((l, b, 20.0))
 
@@ -61,7 +61,7 @@ plt.figure(figsize=(6, 4))
 plt.plot(llist / 2, elist, '-o', lw=1.8)
 plt.xlabel('Bond Length (Å)')
 plt.ylabel('Total Energy (eV)')
-plt.title('C–Fe Bond Energy Curve')
+plt.title('Bond Energy Curve')
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('bond_energy_curve.png', dpi=300)
